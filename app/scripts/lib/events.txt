@@ -1,9 +1,19 @@
-{
+[
 	{
-		"title":
-		"description":
-		"start":
-		"end":
-		"location":
+		"title": 'Fahrenheit 451 by Aquila Theatre',
+		"description": 'Ray Bradbury's distrubingly prescient, dystopian, yet ultimately hopeful tale of censorship and the narcotic effects of media comes alive in this brilliant stage adaptation from New York's "classically trained, modernly hip" Aquila Theatre.',
+		"start": '03/19/2014 19:30',
+		"end": '03/19/2014 21:30',
+		"location": '1595 Pleasant St Boulder, CO',
+		"location-name": 'Main Campus - Macky Auditorium'
 	},
-}
+	{
+		"title": ,
+		"description": ,
+		"start": ,
+		"end": ,
+		"location": ,
+		"location-name":
+	}
+
+]
