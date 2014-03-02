@@ -1,36 +1,41 @@
-<div class="header">
-  <ul class="nav nav-pills pull-right">
-    <li class="active"><a ng-href="#">Home</a></li>
-    <li><a ng-href="#">About</a></li>
-    <li><a ng-href="#">Contact</a></li>
-  </ul>
-  <h3 class="text-muted">minimum_viable_product</h3>
-</div>
+<!--<div class="header">-->
+  <!--<ul class="nav nav-pills pull-right">-->
+    <!--<li class="active"><a ng-href="#">Home</a></li>-->
+    <!--<li><a ng-href="#">Interested in seeing where this goes?</a></li>-->
+  <!--</ul>-->
+<!--</div>-->
 
 <div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
+
+    <h1>Are you bored? </h1>
+    <h4>Check out what's going on around you!</h4>
 </div>
+<div ng-controller="MainCtrl">
+        <label class="checkbox">
+            <input type="checkbox" ng-model="oneAtATime">
+            Open only one at a time
+        </label>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+        <accordion close-others="oneAtATime">
+            <accordion-group heading="Static Header, initially expanded" is-open="true">
+                This content is straight in the template.
+            </accordion-group>
+            <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
+                {{group.content}}
+            </accordion-group>
+            <accordion-group heading="Dynamic Body Content">
+                <p>The body of the accordion group grows to fit the contents</p>
+                <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+                <div ng-repeat="item in items">{{item}}</div>
+            </accordion-group>
+            <accordion-group is-open="isopen">
+                <accordion-heading>
+                    I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
+                </accordion-heading>
+                This is just some content to illustrate fancy headings.
+            </accordion-group>
+        </accordion>
 </div>
 
 <div class="footer">
-  <p>♥ from the Yeoman team</p>
 </div>
