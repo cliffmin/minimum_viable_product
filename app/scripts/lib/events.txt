@@ -5,7 +5,8 @@
 		"start": '03/19/2014 19:30',
 		"end": '03/19/2014 21:30',
 		"location": '1595 Pleasant St Boulder, CO',
-		"location-name": 'Main Campus - Macky Auditorium'
+		"location-name": 'Main Campus - Macky Auditorium',
+		"price": '$14'
 	},
 	{
 		"title": 'Feel Good Fridays: Weekly guided meditation for stress relief',
@@ -13,7 +14,8 @@
 		"start": '03/07/2014 12:10',
 		"end": '03/07/2014 12:40',
 		"location": '2249 Willard Loop Drive, CO 80305',
-		"location-name": 'C4C, JD Abrams Lounge (3rd Floor)'
+		"location-name": 'C4C, JD Abrams Lounge (3rd Floor)',
+		"price": 'free'
 	},
 	{
 		"title": 'Extreme Bowling Fridays',
@@ -22,15 +24,80 @@
 		"end": '03/07/2014 24:00',
 		"location": '1669 Euclid Ave Boulder, CO',
 		"location-name": 'UMC Connection'
+		"price": '$2.75/person/game for CU Students, $3.75/person/game for public, $2.75 shoe rental'
 	},
 	{
-		"title": '',
-		"description": '',
-		"start": '',
-		"end": '',
-		"location": '',
-		"location-name": ''
+		"title": 'To Space and Back',
+		"description": '“To Space & Back” takes audiences on an incredible journey from the far reaches of our known universe to our own planet. It is an extraordinary story of human ingenuity and incredible engineering, describing how the technology that transports us through space is paving the way for the devices and apps we use every day. Our curiosity and desire to see farther have generated two parallel stories: one reaching out into the depths of space and time, and the other reaching back down to our story here on Earth. “To Space & Back,” narrated by James May, explores the way each of us has been changed by the discoveries made by the international space program. From the devices we use every day to the tools that are breaking new ground in medicine and engineering, we can thank space exploration for making our modern lives possible.',
+		"start": '03/08/2014 19:00',
+		"end": '03/08/2014 20:00',
+		"location": '408 UCB Boulder, CO',
+		"location-name": 'Fiske Planetarium'
+		"price": '$7 for students with ID and children, $10 for Adults'
+	},
+	{
+		"title": 'Drop-In Tai Chi',
+		"description": 'This drop-in group will utilize Tai Chi exercises as a way to release stress and increase a sense of calmness in a relaxed and casual atmosphere. Group is intended to facilitate physical and psychological wellness, and will increase awareness of how stress impacts one's daily life, health and emotional well-being. Every Monday',
+		"start": '03/10/2014 12:00',
+		"end": '03/10/2014 13:00',
+		"location": '2249 Willard Loop Drive',
+		"location-name": 'C4C S350'
+		"price": 'free for CU Students'
+	},
+	{
+		"title": 'I Love Mondays',
+		"description": 'Join us each week for a free event and a great way to cure your case of the Mondays. We will plan a variety of activities such as tie-dye, cookie decorating, a live dj, pumpkin painting, and more! Take a break during classes and do something fun to start your week!',
+		"start": '03/10/2014 14:00',
+		"end": '03/10/2014 15:00',
+		"location": '1669 Euclid Ave Boulder, CO',
+		"location-name": 'North Dining Room - 1st Floor UMC'
+		"price": 'free'
+	},
+	{
+		"title": 'Ralphie\'s Cooking Basics',
+		"description": 'Join your fellow students to learn basic cooking techniques each week!! The class is taught each Thursday on a first come, first serve basis. Sign up for the class will be available at 4:45 p.m. at the UMC Baby Doe\'s Cafe. All materials will be provided.',
+		"start": '03/13/2014 17:00',
+		"end": '03/13/2014 19:00',
+		"location": '1669 Euclid Ave Boulder, CO',
+		"location-name": 'UMC Baby Doe\'s Cafe',
+		"price": 'free'
+	},
+	{
+		"title": 'CU vs. USC Tennis',
+		"description": 'Join the CU tennis team as the Buffaloes open Pac-12 Conference play against Southern California.',
+		"start": '03/14/2014 13:00',
+		"end": '03/14/2014 17:00',
+		"location": 'South Campus Boulder, CO',
+		"location-name": 'South Campus - Tennis Complex',
+		"price": 'free'
+	},
+	{
+		"title": 'David Grisman\'s Folk Jazz Trio',
+		"description": 'David Grisman and his bass-playing son Sam, first met and played with guitarist/vocalist extraordinaire Jim Hurst a decade ago at the "Bluegrass at the Beach" camp in Oregon. In 2011, David attended one of Jim's remarkable solo performances in Sonoma County and was inspired to form this trio to explore some of their common roots in folk, country and jazz.',
+		"start": '03/07/2014 19:00',
+		"end": '03/07/2014 24:00',
+		"location": '2032 14th St. Boulder, CO 80302',
+		"location-name": 'Boulder Theatre',
+		"price": '$27.50 GA'
+	},
+	{
+		"title": 'Ladysmith Black Mambazo',
+		"description": 'In 2013, Ladysmith Black Mambazo – led by founder and leader Joseph Shabalala – celebrates over fifty years of joyous and uplifting music that marries the intricate rhythms and harmonies of their native South African musical traditions to the sounds and sentiments of Christian gospel music. In those years, the a cappella vocal group has created a musical and spiritual alchemy that has touched a worldwide audience representing every corner of the religious, cultural and ethnic landscape. Their musical efforts over the past five decades have garnered praise and accolades within the recording industry, but also solidified their identity as a cultural force to be reckoned with.',
+		"start": '03/09/2014 19:00',
+		"end": '03/09/2014 24:00',
+		"location": '2032 14th St. Boulder, CO 80302',
+		"location-name": 'Boulder Theatre',
+		"price": '$25.00 GA'
+	},
+	{
+		"title": 'The Pink Floyd Experience',
+		"description": 'The vision was not to produce a stadium show. In fact, in an effort to create the true Pink Floyd experience it would be just the opposite. Two key factors were at the core of the plan: Keep it intimate. Put the legendary combination of music, sound and lights in a theatre atmosphere. And ensure the sensual attack of Floyd. Give it top a priority along with the music. They nailed it. They found the band, the lights and the sound to create THE show for the ultimate Floyd fan, and it’s called... The Pink Floyd Experience.',
+		"start": '03/13/2014 20:00',
+		"end": '03/13/2014 24:00',
+		"location": '2032 14th St. Boulder, CO 80302',
+		"location-name": 'Boulder Theatre',
+		"price": '$27.50 GA'
+	},
 
-	}
 
 ]
