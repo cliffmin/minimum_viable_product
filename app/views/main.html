@@ -1,27 +1,41 @@
-<!--<div class="header">-->
-<!--<ul class="nav nav-pills pull-right">-->
-<!--<li class="active"><a ng-href="#">Home</a></li>-->
-<!--<li><a ng-href="#">Interested in seeing where this goes?</a></li>-->
-<!--</ul>-->
-<!--</div>-->
+<div style="padding: 20px">
+    <ul class="nav nav-pills pull-right">
+        <li><a class="btn btn-large btn-success" href="#/signUp"><i class="fa fa-anchor"></i>Sign up today</a></li>
+        <li><a ng-href="#">About</a></li>
+    </ul>
+</div>
 
-<div class="jumbotron">
-
+<div style="margin-top: 30px" class="jumbotron">
     <h1>Are you bored? </h1>
     <h4>Check out what's going on around you!</h4>
 </div>
 <div ng-controller="MainCtrl">
+    <div class="myButtons" style="margin: 20px; background-color: floralwhite">
+        <div class="container">
+            <a ng-click="predicate = ''">ALL</a>
+            <a ng-click="predicate = 'Music'">MUSIC</a>
+            <a ng-click="predicate = 'Festival'">FESTIVAL</a>
+            <a ng-click="predicate = 'Performing Arts'">PERFORMING ARTS</a>
+            <a ng-click="predicate = 'Class'">CLASS</a>
+            <a ng-click="predicate = 'Activity'">ACTIVITY</a>
+            <a ng-click="predicate = 'Show'">SHOW</a>
+            <a ng-click="predicate = 'Sporting Event'">SPORTING EVENT</a>
+            <a ng-click="predicate = 'Talk'">TALK</a>
+            <a ng-click="predicate = 'Art & Literature'">ART & LITERATURE</a></div>
+    </div>
+
+
     <div class="panel-group" id="accordion">
-        <div ng-repeat="event in events">
+        <div ng-repeat="event in events | filter: predicate">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                            {{ event.title }}
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{ event.id.toString() }}">
+                            {{ event.title }} | {{ parser(event.start) | date:'MM/dd/yyyy @ h:mma' }} | {{ parser(event.end) | date:'MM/dd/yyyy @ h:mma' }}
                         </a>
                     </h4>
                 </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
+                <div id="collapse{{ event.id.toString() }}" class="panel-collapse collapse">
                     <div class="panel-body">
                         {{ event.description }}
                     </div>
@@ -30,7 +44,6 @@
         </div>
     </div>
 </div>
-<div id="map-canvas"></div>
 
 
 <div class="footer">
