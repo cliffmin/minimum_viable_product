@@ -1,11 +1,14 @@
 'use strict';
 
+//sort table by date
+//get current location
+//pretty it up
+
 angular.module('minimumViableProductApp', [
         'ngCookies',
         'ngResource',
         'ngSanitize',
-        'ngRoute',
-        'ui.bootstrap'
+        'ngRoute'
     ])
     .config(function ($routeProvider) {
         $routeProvider

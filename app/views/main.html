@@ -1,8 +1,8 @@
 <!--<div class="header">-->
-  <!--<ul class="nav nav-pills pull-right">-->
-    <!--<li class="active"><a ng-href="#">Home</a></li>-->
-    <!--<li><a ng-href="#">Interested in seeing where this goes?</a></li>-->
-  <!--</ul>-->
+<!--<ul class="nav nav-pills pull-right">-->
+<!--<li class="active"><a ng-href="#">Home</a></li>-->
+<!--<li><a ng-href="#">Interested in seeing where this goes?</a></li>-->
+<!--</ul>-->
 <!--</div>-->
 
 <div class="jumbotron">
@@ -11,31 +11,27 @@
     <h4>Check out what's going on around you!</h4>
 </div>
 <div ng-controller="MainCtrl">
-        <label class="checkbox">
-            <input type="checkbox" ng-model="oneAtATime">
-            Open only one at a time
-        </label>
-
-        <accordion close-others="oneAtATime">
-            <accordion-group heading="Static Header, initially expanded" is-open="true">
-                This content is straight in the template.
-            </accordion-group>
-            <accordion-group heading="{{group.title}}" ng-repeat="group in groups">
-                {{group.content}}
-            </accordion-group>
-            <accordion-group heading="Dynamic Body Content">
-                <p>The body of the accordion group grows to fit the contents</p>
-                <button class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
-                <div ng-repeat="item in items">{{item}}</div>
-            </accordion-group>
-            <accordion-group is-open="isopen">
-                <accordion-heading>
-                    I can have markup, too! <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isopen, 'glyphicon-chevron-right': !isopen}"></i>
-                </accordion-heading>
-                This is just some content to illustrate fancy headings.
-            </accordion-group>
-        </accordion>
+    <div class="panel-group" id="accordion">
+        <div ng-repeat="event in events">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            {{ event.title }}
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        {{ event.description }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<div id="map-canvas"></div>
+
 
 <div class="footer">
 </div>
