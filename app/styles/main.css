@@ -7,6 +7,12 @@ body {
 .btn i {
     margin-right: 8px;
 }
+#bg{
+    background-color:#FFFFCC;
+    opacity:0.7;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+    padding: 20px;
+}
 h1 {
     text-shadow: 1px 1px 1px #ccc;
 }
