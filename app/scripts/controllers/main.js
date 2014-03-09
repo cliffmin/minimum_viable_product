@@ -9,6 +9,7 @@ angular.module('minimumViableProductApp')
         $scope.submit = function (user) {
             $scope.emailSwitch = false;
             $scope.user = user;
+            console.log(JSON.stringify(user));
         }
         $scope.sendEmail = function () {
             $scope.emailSwitch = false;

@@ -26,7 +26,7 @@
         </ul>
     </div>
     <div class="row">
-        <div style="margin-top: 30px; background-color: transparent" class="jumbotron">
+        <div style="background-color: transparent" class="jumbotron">
             <h1 style="font-size: 40px">Looking for something to do??</h1>
 
             <h3>Check out what's going on around you!</h3></div>
@@ -51,23 +51,22 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion"
-                           href="#collapse{{ event.id.toString() }}">
-                            {{ event.title }}<span style="color: cornflowerblue"> || </span>{{ event.locationName }}
-                                <span ng-hide="emailSwitch" style="color: cornflowerblue"> ||
-                                <!-- Squared FOUR -->
-                                    <div class="squaredFour pull-right">
-                                        <input ng-click="sendEmail()" type="checkbox" value="None" id="squaredFour" name="check"/>
-                                        <label for="squaredFour"></label>
-                                    </div>
-                                </span>
+                        <p>
+<strong>{{ event.title }}<span style="color: cornflowerblue"> || </span>{{ event.locationName }}</strong>
+                                <!--<span ng-hide="emailSwitch" style="color: cornflowerblue"> ||-->
+                                <!--&lt;!&ndash; Squared FOUR &ndash;&gt;-->
+                                    <!--<div class="squaredFour pull-right">-->
+                                        <!--<input ng-click="sendEmail()" type="checkbox" value="None" id="squaredFour" name="check"/>-->
+                                        <!--<label for="squaredFour"></label>-->
+                                    <!--</div>-->
+                                <!--</span>-->
 
                             <!--| {{ parser(event.start) | date:'MM/dd/yyyy @ h:mma' }} | {{-->
                             <!--parser(event.end) | date:'MM/dd/yyyy @ h:mma' }}-->
-                        </a>
+                        </p>
                     </h4>
                 </div>
-                <div id="collapse{{ event.id.toString() }}" class="panel-collapse collapse">
+                <div id="collapse{{ event.id.toString() }}" class="panel-collapse collapse in">
                     <div class="panel-body">
                         {{ event.description }} <br/>
 
