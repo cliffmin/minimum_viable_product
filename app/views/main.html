@@ -1,52 +1,84 @@
-<div id="bg" style="background-color: antiquewhite">
-    <div style="padding: 20px">
+<div ng-controller="MainCtrl" id="bg" style="background-color: antiquewhite">
+    <div id="headerButtons" class="header row" style="padding: 10px">
         <ul class="nav nav-pills pull-right">
-            <li><a class="btn btn-large btn-success" href="#/signUp"><i class="fa fa-anchor"></i>Follow our project!</a>
+            <li class='dropdown' data-dropdown='dropdown'>
+            <li class="dropdown">
+                <a class="btn btn-large btn-success dropdown-toggle" href="" data-toggle="dropdown">Contact</a>
+
+                <!--don't call the controller multiple times, get scoping issues, can use it to isolate though-->
+                <div class="dropdown-menu"
+                     style="color: dimgrey; padding: 15px; padding-bottom: 0px;">
+                    <form ng-submit="submit(user)" method="post" accept-charset="UTF-8">
+                        So that we can get you the event information!
+                        <input type="text" required placeholder="Your Email"
+                               ng-model="user.email" style="margin-bottom: 15px;"
+                               name="name" size="30"/>
+
+                        <div ng-hide="emailSwitch">Thanks!</div>
+                        <input class="btn btn-primary"
+                               style="margin-bottom: 10px; clear: left; width: 100%; height: 32px; font-size: 13px;"
+                               type="submit" name="commit" value="Register!"/>
+                    </form>
+                </div>
+            </li>
             </li>
             <li><a ng-href="#">About</a></li>
         </ul>
     </div>
-    <div style="margin-top: 30px; background-color: transparent" class="jumbotron">
-        <h1 style="font-size: 45px">Looking for something to do??</h1>
-        <h3>Check out what's going on around you!</h3>
+    <div class="row">
+        <div style="margin-top: 30px; background-color: transparent" class="jumbotron">
+            <h1 style="font-size: 40px">Looking for something to do??</h1>
+
+            <h3>Check out what's going on around you!</h3></div>
     </div>
-    <div ng-controller="MainCtrl">
-        <div class="myButtons" style="margin: 20px; background-color: floralwhite">
-            <div class="container">
-                <a ng-click="predicate = ''">ALL</a> |
-                <a ng-click="predicate = 'Music'">MUSIC</a> |
-                <a ng-click="predicate = 'Festival'">FESTIVAL</a> |
-                <a ng-click="predicate = 'Performing Arts'">PERFORMING ARTS</a> |
-                <a ng-click="predicate = 'Class'">CLASS</a> |
-                <a ng-click="predicate = 'Activity'">ACTIVITY</a> |
-                <a ng-click="predicate = 'Show'">SHOW</a> |
-                <a ng-click="predicate = 'Sporting Event'">SPORTING EVENT</a> |
-                <a ng-click="predicate = 'Talk'">TALK</a> |
-                <a ng-click="predicate = 'Art & Literature'">ART & LITERATURE</a></div>
-        </div>
 
+    <div class="myButtons row" style="margin: 20px; background-color: floralwhite">
+        <div class="container">
+            <a ng-click="predicate = ''">ALL</a> |
+            <a ng-click="predicate = 'Music'">MUSIC</a> |
+            <a ng-click="predicate = 'Festival'">FESTIVAL</a> |
+            <a ng-click="predicate = 'Performing Arts'">PERFORMING ARTS</a> |
+            <a ng-click="predicate = 'Class'">CLASS</a> |
+            <a ng-click="predicate = 'Activity'">ACTIVITY</a> |
+            <a ng-click="predicate = 'Show'">SHOW</a> |
+            <a ng-click="predicate = 'Sporting Event'">SPORTING EVENT</a> |
+            <a ng-click="predicate = 'Talk'">TALK</a> |
+            <a ng-click="predicate = 'Art & Literature'">ART & LITERATURE</a></div>
+    </div>
 
-        <div class="panel-group" id="accordion">
-            <div ng-repeat="event in events | filter: predicate">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion"
-                               href="#collapse{{ event.id.toString() }}">
-                                {{ event.title }} | {{ parser(event.start) | date:'MM/dd/yyyy @ h:mma' }} | {{
-                                parser(event.end) | date:'MM/dd/yyyy @ h:mma' }}
-                            </a>
-                        </h4>
-                    </div>
-                    <div id="collapse{{ event.id.toString() }}" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            {{ event.description }}
-                        </div>
+    <div class="panel-group row" id="accordion">
+        <div ng-repeat="event in events | filter: predicate">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion"
+                           href="#collapse{{ event.id.toString() }}">
+                            {{ event.title }}<span style="color: cornflowerblue"> || </span>{{ event.locationName }}
+                                <span ng-hide="emailSwitch" style="color: cornflowerblue"> ||
+                                <!-- Squared FOUR -->
+                                    <div class="squaredFour pull-right">
+                                        <input ng-click="sendEmail()" type="checkbox" value="None" id="squaredFour" name="check"/>
+                                        <label for="squaredFour"></label>
+                                    </div>
+                                </span>
+
+                            <!--| {{ parser(event.start) | date:'MM/dd/yyyy @ h:mma' }} | {{-->
+                            <!--parser(event.end) | date:'MM/dd/yyyy @ h:mma' }}-->
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse{{ event.id.toString() }}" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        {{ event.description }} <br/>
+
+                        <p style="color: indianred">{{ event.start }} || {{ event.end }}</p>
+                        <p><a href="{{ event.url }}">Link</a></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 
